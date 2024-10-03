@@ -1,0 +1,28 @@
+@startuml personal_trainer
+left to right direction
+
+actor admin
+actor user
+actor trainer
+
+rectangle personal_trainer{
+usecase "view analyse" as UC1
+usecase "add trainer" as UC2
+usecase "remove trainer" as UC3
+usecase "view trainer list" as UC4
+usecase "book a trainer" as UC5
+usecase "submit profile" as UC6
+usecase "accept booking" as UC7
+usecase "refuse booking" as UC8
+}
+
+admin -- UC1
+admin -- UC2
+admin -- UC3
+user -- UC4
+user -- UC5
+trainer -- UC6
+trainer -- UC7
+trainer -- UC8
+
+@enduml
