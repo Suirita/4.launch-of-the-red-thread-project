@@ -1,28 +1,18 @@
-@startuml personal_trainer
+@startuml home_workout_planner
 left to right direction
 
-actor admin
-actor user
-actor trainer
+actor User as user
 
-rectangle personal_trainer{
-usecase "view analyse" as UC1
-usecase "add trainer" as UC2
-usecase "remove trainer" as UC3
-usecase "view trainer list" as UC4
-usecase "book a trainer" as UC5
-usecase "submit profile" as UC6
-usecase "accept booking" as UC7
-usecase "refuse booking" as UC8
+rectangle "Home Workout Planner" {
+usecase "Create Personal Profile" as UC1
+usecase "Take Fitness Assessment" as UC2
+usecase "Track Progress" as UC3
+usecase "Get Workout Reminders" as UC4
 }
 
-admin -- UC1
-admin -- UC2
-admin -- UC3
+user -- UC1
+user -- UC2
+user -- UC3
 user -- UC4
-user -- UC5
-trainer -- UC6
-trainer -- UC7
-trainer -- UC8
 
 @enduml
