@@ -1,0 +1,12 @@
+@startuml home_workout_planner_S1
+left to right direction
+
+actor User as user
+
+rectangle "Home Workout Planner" {
+usecase "Create Personal Profile" as UC1
+}
+
+user -- UC1
+
+@enduml
