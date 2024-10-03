@@ -2,19 +2,22 @@
 left to right direction
 
 actor User as user
+actor User as admin
 
 rectangle "Home Workout Planner" {
-usecase "Create Personal Profile" as UC1
+usecase "Creat Program" as UC1
 usecase "Take Fitness Assessment" as UC2
 usecase "Track Progress" as UC3
 usecase "Get Workout Reminders" as UC4
+usecase "CRUD Personal Profile" as UC5
 }
 
+admin -- UC1
 user -- UC2
 user -- UC3
 user -- UC4
-UC2 ..> UC1:<<include>>
-UC3 ..> UC1:<<include>>
-UC4 ..> UC1:<<include>>
+UC2 ..> UC5:<<include>>
+UC3 ..> UC5:<<include>>
+UC4 ..> UC5:<<include>>
 
 @enduml
